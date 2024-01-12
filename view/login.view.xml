@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="checkprice.controller.login"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <VBox
+                fitContainer="true"
+                justifyContent="Center"
+                alignItems="Center"
+            >
+                <f:Card
+                    width="300px"
+                    height="300px"
+                >
+                    <f:content>
+                        <VBox
+                            width="100%"
+                            justifyContent="Center"
+                            alignItems="Center"
+                        >
+                            <VBox width="55%">
+                                <Label text="User" />
+                                <Input />
+                            </VBox>
+                            <VBox width="55%">
+                                <Label text="Password" />
+                                <Input type="Password" showValueHelp="true" valueHelpIconSrc="sap-icon://show" valueHelpRequest="onChangeType"/>
+                            </VBox>
+                            <HBox
+                                width="55%"
+                                justifyContent="End"
+                            >
+                                <Button text="Login" press="onPressLogin"/>
+                            </HBox>
+                        </VBox>
+                    </f:content>
+                </f:Card>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

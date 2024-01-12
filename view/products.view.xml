@@ -1,0 +1,67 @@
+<mvc:View
+    controllerName="checkprice.controller.products"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+>
+    <f:DynamicPage>
+        <f:header>
+            <f:DynamicPageHeader>
+                <form:SimpleForm >
+                    <form:content>
+                        <c:Title text="Parametros de Pesquisa" />
+                        <Label text="CAmpo1" />
+                        <Input width="200px" />
+                        <Label text="CAmpo2" />
+                        <Input width="200px" />
+                        <Label text="CAmpo3" />
+                        <Input width="200px" />
+                    </form:content>
+                </form:SimpleForm>
+                <HBox justifyContent="End">
+                    <Button
+                        text="Buscar"
+                        icon="sap-icon://search"
+                    />
+                </HBox>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table>
+                <headerToolbar>
+                    <OverflowToolbar>
+                    <Title
+                    text="Products(0)">
+                        
+                    </Title>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://excel-attachment"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="coluna1" />
+                    </Column>
+                    <Column>
+                        <Text text="coluna2" />
+                    </Column>
+                    <Column>
+                        <Text text="coluna3" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="valor1" />
+                            <Text text="valor2" />
+                            <Text text="valor3" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>
