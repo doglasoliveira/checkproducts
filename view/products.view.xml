@@ -4,60 +4,66 @@
     xmlns="sap.m"
     xmlns:c="sap.ui.core"
     xmlns:f="sap.f"
-    xmlns:form="sap.ui.layout.form"
     displayBlock="true"
 >
     <f:DynamicPage>
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:content>
+                    <Title text="{i18n>title}"/>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
         <f:header>
             <f:DynamicPageHeader>
-                <form:SimpleForm >
-                    <form:content>
-                        <c:Title text="Parametros de Pesquisa" />
-                        <Label text="CAmpo1" />
-                        <Input width="200px" />
-                        <Label text="CAmpo2" />
-                        <Input width="200px" />
-                        <Label text="CAmpo3" />
-                        <Input width="200px" />
-                    </form:content>
-                </form:SimpleForm>
-                <HBox justifyContent="End">
-                    <Button
-                        text="Buscar"
-                        icon="sap-icon://search"
-                    />
-                </HBox>
+                <Input
+                    id="idProductInput"
+                    showValueHelp="true"
+                    valueHelpIconSrc="sap-icon://product"
+                    valueHelpRequest="onValueHelpProductPress"
+                    placeholder="Product"
+                    width="300px"
+                />
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
-            <Table>
+            <Table id="idProductsTable" items="{/Products}">
                 <headerToolbar>
                     <OverflowToolbar>
-                    <Title
-                    text="Products(0)">
-                        
-                    </Title>
+                        <Title text="Products(0)" />
                         <ToolbarSpacer />
-                        <Button icon="sap-icon://excel-attachment"/>
+                        <Button icon="sap-icon://clear-filter" press="resetFilters"/>
                     </OverflowToolbar>
                 </headerToolbar>
                 <columns>
                     <Column>
-                        <Text text="coluna1" />
+                        <Text text="Product Name" />
                     </Column>
                     <Column>
-                        <Text text="coluna2" />
+                        <Text text="Quantity Per Unit" />
                     </Column>
                     <Column>
-                        <Text text="coluna3" />
+                        <Text text="Unit Price" />
+                    </Column>
+                    <Column>
+                        <Text text="Units In Stock" />
+                    </Column>
+                    <Column>
+                        <Text text="Units On Order" />
+                    </Column>
+                    <Column>
+                        <Text text="Reorder Level" />
                     </Column>
                 </columns>
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <Text text="valor1" />
-                            <Text text="valor2" />
-                            <Text text="valor3" />
+                            <Text text="{ProductName}" />
+                            <Text text="{QuantityPerUnit}" />
+                            <Text text="{UnitPrice}" />
+                            <Text text="{UnitsInStock}" />
+                            <Text text="{UnitsOnOrder}" />
+                            <Text text="{ReorderLevel}" />
                         </cells>
                     </ColumnListItem>
                 </items>

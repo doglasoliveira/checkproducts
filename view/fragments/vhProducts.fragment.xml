@@ -1,0 +1,27 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+>
+    <Dialog showHeader="false">
+        <content>
+            <Table mode="SingleSelectMaster" items="{/Products}" headerText="Select a product" selectionChange="onSelectItem">
+                <columns>
+                    <Column>
+                        <Text text="Product Id" />
+                    </Column>
+                    <Column>
+                        <Text text="Product Name" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ProductID}"/>
+                            <Text text="{ProductName}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Dialog>
+</c:FragmentDefinition>
