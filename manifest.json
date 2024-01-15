@@ -20,6 +20,8 @@
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
+          "annotations": [],
+          "localUri": "https://doglasoliveira.github.io/checkproducts/",
           "odataVersion": "2.0"
         }
       }
@@ -68,14 +70,9 @@
         }
       },
       "": {
-        "type": "sap.ui.model.odata.v2.ODataModel",
-        "settings": {
-          "defaultOperationMode": "Server",
-          "defaultBindingMode": "TwoWay",
-          "defaultCountMode": "Inline",
-          "useBatch": false
-        },
-        "dataSource": "mainService"
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
       }
     },
     "resources": {
